@@ -1,0 +1,15 @@
+<% provide(:title, @user.username) %>
+<div class="row">
+  <aside class="span4">
+  <section>
+  <h1>
+    <center><%= image_tag avatar_url current_user, :size=> 50  %></center>
+  </br>
+    <center><%= @user.name %></center>
+  </h1>
+  </section>
+  <section>
+  <%= render 'shared/stats' %>
+  </section>
+  </aside>
+</div>

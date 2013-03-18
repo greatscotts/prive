@@ -1,0 +1,42 @@
+<% provide(:title, 'Sign up') %>
+<body>
+	
+
+</br>
+</br>
+
+
+</br>
+
+<h1>Welcome to kiido.ph Join our free classes</h1>
+
+</br>
+
+<div id="signingup">
+<div class="row">
+	
+  <div class="span6 offset7">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', :object=> f.object %>
+      <%= render 'fields', :f => f %>
+      <center><%= f.submit "Sign up", :class=> "btn btn-large btn-primary" %></center>
+    <% end %>
+</div>
+  </div>
+</div>
+</div>
+    </br>
+</br>
+</br>
+</br>
+</br>
+
+<center> Copyright 2013 OrangeApps © All Rights Reserved. </center>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+</body>

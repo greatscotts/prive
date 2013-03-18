@@ -1,0 +1,28 @@
+<% provide(:title, @user.username) %>
+<div class="row">
+  <aside class="span4">
+  <section>
+  <h1>
+    <center><%= image_tag avatar_url @user, :size=> 50  %></center>
+  </br>
+    <center><%= @user.name %></center>
+  </h1>
+<center><%= @user.status %></center>
+<center><%= @user.location %></center>
+<center><%= @user.school %></center>
+  </section>
+  <section>
+  <%= render 'shared/stats' %>
+  </section>
+  </aside>
+  <div class="span8">
+    <%= render "follow_form" if signed_in? %>
+    <% if @user.microposts.any? %>
+      <h3><k>Wall Feed (<%= @user.microposts.count %>)</k></h3>
+      <ol class="microposts span6">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+</div>

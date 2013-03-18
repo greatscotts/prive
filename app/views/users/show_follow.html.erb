@@ -1,0 +1,26 @@
+<% provide(:title, @title) %>
+<div class="row">
+  <aside class="span4">
+    <center>
+    <section>
+      <%= image_tag avatarzz_url @user %>
+      <h1><center><%= @user.username %></center></h1>
+      <span><%= link_to "view profile", @user %></span>
+    </section>
+  </center>
+  <section>
+    <%= render 'shared/stats' %>
+  </section>
+  </aside>
+  <center class="middle">
+  <div class="span7">
+    <h3><%= @title %></h3>
+    <% if @users.any? %>
+      <ul class="users">
+        <%= render @users %>
+      </ul>
+      <%= will_paginate %>
+    <% end %>
+  </div>
+</center>
+</div>

@@ -1,0 +1,41 @@
+<% provide(:title, "Sign in") %>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Sign In</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(:session, :url=> sessions_path) do |f| %>
+
+      <%= f.label :username%>
+      <%= f.text_field :username %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      
+      <%= f.submit "Sign in", :class=> "btn btn-large btn-primary" %>
+    <% end %>
+
+    <p>New user? <%= link_to "Sign up now!", bugs_path %></p>
+    <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center> Copyright 2013 OrangeApps © All Rights Reserved. </center>
+<br>
+
+  </div>
+</div>
