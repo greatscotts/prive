@@ -23,6 +23,8 @@ SampleApp::Application.routes.draw do
    match '/course',  :to=> 'static_pages#courses'
     match '/bugs',  :to=> 'static_pages#bug'
     match '/teach',  :to=> 'static_pages#teach'
+    match '/html5',  :to=> 'static_pages#les1'
+     match '/android',  :to=> 'static_pages#les2'
 
   root      :to=> 'static_pages#home'
 
