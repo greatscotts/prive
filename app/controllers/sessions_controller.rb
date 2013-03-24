@@ -1,7 +1,8 @@
 class SessionsController < ApplicationController
   def new
     @title ="Sign In"
-  end
+   end
+
 
   def create
     user = User.find_by_username(params[:session][:username])
@@ -16,7 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    redirect_to root_path
+    redirect_to home_path
   end
 
 end
