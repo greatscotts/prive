@@ -1,6 +1,7 @@
 
 
 <% provide(:title, 'Courses') %>
+<% if signed_in? %>
 
 </br>
 </br>
@@ -16,7 +17,9 @@
   <%= render @users %>
 
 </ul>
-
+<% else %>
+  <%= render "shared/home" %>
+<% end %>
 </br>
 </br>
 </br>
