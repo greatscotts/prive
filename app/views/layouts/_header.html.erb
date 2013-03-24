@@ -1,27 +1,25 @@
 <% if signed_in? %>
 
-<header class="navbar navbar-fixed-top navbar-inverse">
-<div class="navigatebar-inner">
+<header class="navbar navbar-fixed-top">
+<div class="navigatebar-inner ">
   <div class="container">
+
     <nav>
       <%= link_to image_tag("icon.png", :id=> "logo"), root_path  %>
     <ul class="nav pull-right menu">
 
-      <li><%= render 'shared/user_navb'%></li>
+       <br>
+
       <li><%= link_to "Home", root_path, :id=> "text" %></li>
-      
+     
+      <li><%= link_to "Courses", course_path, :id=> "text" %></li>
+      <li><%= link_to "About ", about_path, :id=> "text" %></li>
      
         <li><%= link_to "Users", users_path, :id=> "text" %></li>
-        <li id="msg-menu" class="dropdown">
-          <a href="#" class = "dropdown-toggle" data-toggle="dropdown" style="color: #ffffff;background-color: #1F73D1">
-            Messages
-          </a>
-          <ul class="dropdown-menu menu">
-            <li><%= link_to "Received", messages_to_user_path(current_user) %></li>
-            <li><%= link_to "Sent", messages_from_user_path(current_user) %></li>
-          </ul>
+      
+      
         <li id="fat-menu" class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ffffff;background-color: #1F73D1">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" id= "text"  >
             Account
           </a>
           <ul class="dropdown-menu menu">
@@ -38,37 +36,29 @@
   </div>
 </div>
 </header>
-<% end %>
 
-<% else %>
+ <% else %>
 
 <header class="navbar navbar-fixed-top">
 <div class="navigatebar-inner ">
   <div class="container">
 
     <nav>
-
       <%= link_to image_tag("icon.png", :id=> "logo"), root_path  %>
+        <br>
 
-  
+    <ul class="nav pull-right menu">
 
-      <br>
-        <ul class="nav pull-right menu">
+
       <li><%= link_to "Home", root_path, :id=> "text" %></li>
+     
       <li><%= link_to "Courses", course_path, :id=> "text" %></li>
       <li><%= link_to "About ", about_path, :id=> "text" %></li>
-  
-      
-     
+            <li><%= link_to "Login", signin_path, :id=> "text" %></li>
         
-           
-            <li> <%= link_to "Login", signin_path,:id=> "text", :method=> :delete %>
-            </li>
-          </ul>
-        </li>
-    </ul>
-    </nav>
+        </ul>
+      </nav>
+    </div>
   </div>
-</div>
 </header>
-
+  <% end %>

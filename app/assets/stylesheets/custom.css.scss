@@ -17,8 +17,10 @@ html {
 }
 
 body {
+background: url('http://i50.tinypic.com/vem70j.png');
   padding-top: 60px;
 }
+
 
 section {
   overflow: auto;
@@ -191,6 +193,7 @@ g{
 /* footer */
 
 footer {
+body {background-color:#b0c4de;}
   margin-top: 140px;
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;
