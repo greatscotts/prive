@@ -1,138 +1,74 @@
-
-<% provide(:title, 'Welcome to kiido.ph') %>
+<% provide(:title, 'Home') %>
 </div>
- </div>
+<!DOCTYPE html>
 
+<html>
+  <head>
+    
 <!--  Carousel - consult the Twitter Bootstrap docs at
       http://twitter.github.com/bootstrap/javascript.html#carousel -->
 <div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
   <div class="carousel-inner">
     <div class="item active"><!-- class of active since it's the first item -->
+      <img src="http://i49.tinypic.com/ri9o61.png" alt="" />
+     
+    </div>
+    <div class="item">
+      <img src="http://i48.tinypic.com/hrhfuc.png" alt="" />
+      
+    </div>
+    <div class="item">
       <img src="http://i48.tinypic.com/351z71e.png" alt="" />
       
     </div>
     <div class="item">
-      <img src="http://i48.tinypic.com/hrhfuc.png" alt="" />
-     
-    </div>
-    <div class="item">
-      <img src="http://placehold.it/1200x480" alt="" />
-      <div class="carousel-caption">
-        <p>Caption text here</p>
-      </div>
-    </div>
-    <div class="item">
-      <img src="http://placehold.it/1200x480" alt="" />
-      <div class="carousel-caption">
-        <p>Caption text here</p>
-      </div>
+      <img src="http://i48.tinypic.com/17veok.png" alt="" />
+      
     </div>
   </div><!-- /.carousel-inner -->
   <!--  Next and Previous controls below
         href values must reference the id for this carousel -->
-    <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
-</div><!-- /.carousel -->
-
- 
-
-</br>
-</br>
-</br>
-</br>
-</br>
-
-</br>
-</br>
-</br>
-</br>
-</br>
-
-<h7>Join our first Class</h7>
-<br>
-<br>
-<br>
-<br>
-<h7>Topic: HTML 5 </h7>
-<br>
-<br>
-&nbsp;<h8>HTML 5 for Everyone</h8>
-
-<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <img src="http://i47.tinypic.com/2w382nr.png"/></a> 
-<br>
-<br>
-
-<%= form_for(:signin, :url=> html5_path) do |f| %>
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<%= f.submit "Enroll Now", :class=> "btn btn-large btn-primary" %>
-    <% end %>
-
-</ul>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h1>Easy as 1 2 3</h1>
-<br>
-<br> <center>  <img src="http://i45.tinypic.com/3582rts.png"/></a> 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
- <h1>We want you  to make a change Be a Teacher !</h1>
-
- <br> <center>  <img src="http://i50.tinypic.com/vsjmvc.png"/></a> 
-<br>
-<br>
-
-<%= form_for(:teach, :url=> teach_path) do |f| %>
- <%= f.submit "Apply Now", :class=> "btn btn-large btn-primary" %>
-    <% end %>
-
-<br>
-
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-
-
- <center><h3><%= link_to "Courses", course_path %> | <%= link_to "About", about_path %> | <%= link_to "Team", root_path %> | <%= link_to "Universities", root_path %> | <%= link_to "Teachers", root_path %> </center>
-
-<br>
-<br>
     
-   
-    <br>
-<br>
+</div><!-- /.carousel -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.carousel').carousel({
+      interval: 4000
+    });
+  });
+</script>
 
-   <center> Copyright 2013 OrangeApps © All Rights Reserved. </center>
+   
     </div>
     </body>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/stylesheets/bootstrap-responsive.css" rel="stylesheet">
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag "application", :media=> "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim/googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39121685-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </head>
+  <%= render 'layouts/footer' %>
+</html>

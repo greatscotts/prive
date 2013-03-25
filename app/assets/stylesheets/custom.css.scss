@@ -193,28 +193,16 @@ g{
 /* footer */
 
 footer {
-body {background-color:#b0c4de;}
-  margin-top: 140px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
- position: relative;
-  a {
-    color: $gray;
-    &:hover {
-      color: $grayDarker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
-  }
+background: url(http://i48.tinypic.com/kcxl5x.png) repeat-x bottom center;
+width: 100%;
+height: 300px; 
+}
+
+footer section.wrap {
+width: 960px;
+margin: 60px auto 0;
+position: relative;
+float: left;    
 }
 /* misc */
 
