@@ -12,22 +12,39 @@
   </br>
     <center><%= @user.name %></center>
   </h1>
-<center><%= @user.status %></center>
-<center><%= @user.location %></center>
-<center><%= @user.school %></center>
-  </section>
-  <section>
-  <%= render 'shared/stats' %>
-  </section>
-  </aside>
-  <div class="span8">
-    <%= render "follow_form" if signed_in? %>
-    <% if @user.microposts.any? %>
-      <h3><k>Wall Feed (<%= @user.microposts.count %>)</k></h3>
-      <ol class="microposts span6">
-        <%= render @microposts %>
-      </ol>
-      <%= will_paginate @microposts %>
-    <% end %>
-  </div>
+</div>
+<div class="mid span10">
+<section class="btnfllow"><%= render "follow_form" if signed_in? %></section>
+<h12><%= @user.name %></h12></br>
+<h3><algnleft>Username: <a>@<%= @user.username %></a></algnleft></br>
+<algnleft>Status: <a><%= @user.status %></a></algnleft></br>
+
+<algnleft>School: <a><%= @user.school %></a></algnleft>
+</br>
+<% if @user.followers.count >= 0 && @user.followers.count < 200%>
+<b>Social Status: Kiido</b>
+<%end%>
+<% if @user.followers.count >= 200 && @user.followers.count < 700%>
+<b>Social Status: Rising Star</b>
+<%end%>
+<% if @user.followers.count >= 700 && @user.followers.count < 1500%>
+<b>Social Status: Sensational</b>
+<%end%>
+<% if @user.followers.count >= 1500 && @user.followers.count < 2000%>
+<b>Social Status: Celebrity</b>
+<%end%>
+</h3>
+</br>
+<section class="offset1">
+<%= render 'shared/stats' %>
+</section>
+</div>
+<div class="span8 bottom">
+  <% if @user.microposts.any? %>
+    <h3><k>Wall Feed (<%= @user.microposts.count %>)</k></h3>
+    <ol class="microposts span6">
+      <%= render @microposts %>
+    </ol>
+  <% end %>
+</div>
 </div>
